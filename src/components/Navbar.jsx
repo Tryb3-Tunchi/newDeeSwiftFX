@@ -309,7 +309,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated, username }) => {
             </div>
             <span className="">
             <span className="text-blue-600 dark:text-blue-400 mr-1">Dee</span>
-            Swift Trade</span>
+            SwiftFX</span>
           </Link>
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex space-x-6">
