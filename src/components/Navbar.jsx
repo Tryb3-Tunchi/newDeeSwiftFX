@@ -304,7 +304,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated, username }) => {
             to={isAuthenticated ? "/dashboard" : "/"}
             className="text-2xl font-bold flex items-center"
           >
-            <div>
+            <div className="tracking-tighter">
               <img className="w-14 sm:w-10 p-0 m-0" src="logo.png" alt="" width={1} />
             </div>
             <span className="tracking-tighter">
