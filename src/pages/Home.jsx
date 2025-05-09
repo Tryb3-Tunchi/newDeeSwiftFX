@@ -174,9 +174,9 @@ const Home = () => {
       <FeatureSection />
       <TradingViewSection />
       <PricingSection />
-      <FAQSection />
       <PackageCarousel />
       <TestimonialSection />
+      <FAQSection />
       <CTASection />
     </div>
   );
