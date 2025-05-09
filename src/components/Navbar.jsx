@@ -304,8 +304,12 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated, username }) => {
             to={isAuthenticated ? "/dashboard" : "/"}
             className="text-2xl font-bold flex items-center"
           >
+            <div>
+              <img className="w-14 sm:w-10 p-0 m-0" src="logo.png" alt="" width={1} />
+            </div>
+            <span className="hidden sm:block">
             <span className="text-blue-600 dark:text-blue-400 mr-1">Dee</span>
-            Swift Trade
+            Swift Trade</span>
           </Link>
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex space-x-6">

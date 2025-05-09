@@ -6,7 +6,8 @@ const Footer = () => (
     <div className="container mx-auto">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="mb-6 md:mb-0">
-          <h3 className="text-xl font-bold mb-3">
+          <h3 className="text-xl flex items-center font-bold mb-3">
+            <div><img className="w-14 sm:w-10 p-0 m-0" src="logo.png" alt="" width={1} /></div>
             <span className="text-blue-300">Dee</span>SwiftFx Trade
           </h3>
           <p className="text-blue-100">

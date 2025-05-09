@@ -98,7 +98,6 @@ const InvestmentPackages = () => {
     setSuccessMessage("");
 
     try {
-      // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
       if (typeof balance === "number" && balance < selectedPackage.price) {
@@ -117,10 +116,10 @@ const InvestmentPackages = () => {
       setShowConfirmModal(false);
       setIsProcessing(false);
 
-      // Update balance if successful
       if (typeof updateBalance === "function") {
         updateBalance(balance - selectedPackage.price);
       }
+      window.location.href = "/deposit"; // Redirect to deposit page
     } catch (error) {
       setErrorMessage(
         "There was an error processing your subscription. Please try again."
@@ -225,7 +224,8 @@ const InvestmentPackages = () => {
                 </div>
               </div>
             </motion.div>
-          ))}
+          ))
+          }
         </div>
 
         <div className="max-w-3xl mx-auto mt-16 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
@@ -265,7 +265,6 @@ const InvestmentPackages = () => {
         </div>
       </div>
 
-      {/* Confirmation Modal */}
       {showConfirmModal && selectedPackage && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <motion.div

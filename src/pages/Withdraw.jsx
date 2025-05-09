@@ -53,7 +53,7 @@ const Withdraw = ({ username }) => {
       requiresDetails: true,
       detailsType: "crypto",
       minAmount: 5,
-      maxAmount: 10000,
+      maxAmount: 200000,
     },
     {
       id: "bank",
@@ -61,7 +61,7 @@ const Withdraw = ({ username }) => {
       requiresDetails: true,
       detailsType: "bank",
       minAmount: 5,
-      maxAmount: 25000,
+      maxAmount: 250000,
     },
   ];
 
