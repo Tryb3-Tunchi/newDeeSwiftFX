@@ -20,7 +20,7 @@ const Footer = () => (
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/"
+                  to="/faq"
                   className="text-blue-100 hover:text-white transition duration-300"
                 >
                   About Us
@@ -28,7 +28,7 @@ const Footer = () => (
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/about"
                   className="text-blue-100 hover:text-white transition duration-300"
                 >
                   Careers
@@ -36,7 +36,7 @@ const Footer = () => (
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/how-it-works"
                   className="text-blue-100 hover:text-white transition duration-300"
                 >
                   News
@@ -49,7 +49,7 @@ const Footer = () => (
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/"
+                  to="/faq"
                   className="text-blue-100 hover:text-white transition duration-300"
                 >
                   Blog
@@ -57,7 +57,7 @@ const Footer = () => (
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/faq"
                   className="text-blue-100 hover:text-white transition duration-300"
                 >
                   FAQ
@@ -65,7 +65,7 @@ const Footer = () => (
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/about"
                   className="text-blue-100 hover:text-white transition duration-300"
                 >
                   Support
