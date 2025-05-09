@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import VerificationModal from "../components/VerificationModal";
-import { signupUser, verifySignupOtp, resendSignupOtp } from "../components/API/Api";
+import {
+  signupUser,
+  verifySignupOtp,
+  resendSignupOtp,
+} from "../components/API/Api";
 const Register = ({ setIsAuthenticated }) => {
   const [signupData, setSignupData] = useState({
     first_name: "",
@@ -128,7 +132,10 @@ const Register = ({ setIsAuthenticated }) => {
         localStorage.setItem("authToken", response.access_token);
         localStorage.setItem("refreshToken", response.refresh_token);
 
-        setIsAuthenticated({ username: response.username }, response.access_token);
+        setIsAuthenticated(
+          { username: response.username },
+          response.access_token
+        );
         setShowVerification(false);
         navigate("/dashboard");
       } else {
@@ -200,7 +207,9 @@ const Register = ({ setIsAuthenticated }) => {
                   id="first-name"
                   autoComplete="given-name"
                   className={`appearance-none rounded-none relative block w-full px-3 py-2 border ${
-                    fieldErrors.first_name ? "border-red-500" : "border-gray-300"
+                    fieldErrors.first_name
+                      ? "border-red-500"
+                      : "border-gray-300"
                   } placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm`}
                   placeholder="First name"
                   value={signupData.first_name}
@@ -208,7 +217,9 @@ const Register = ({ setIsAuthenticated }) => {
                   required
                 />
                 {fieldErrors.first_name && (
-                  <p className="text-red-500 text-xs mt-1">{fieldErrors.first_name}</p>
+                  <p className="text-red-500 text-xs mt-1">
+                    {fieldErrors.first_name}
+                  </p>
                 )}
               </div>
               <div>
@@ -229,7 +240,9 @@ const Register = ({ setIsAuthenticated }) => {
                   required
                 />
                 {fieldErrors.last_name && (
-                  <p className="text-red-500 text-xs mt-1">{fieldErrors.last_name}</p>
+                  <p className="text-red-500 text-xs mt-1">
+                    {fieldErrors.last_name}
+                  </p>
                 )}
               </div>
             </div>
@@ -265,14 +278,18 @@ const Register = ({ setIsAuthenticated }) => {
                 autoComplete="tel"
                 required
                 className={`appearance-none rounded-none relative block w-full px-3 py-2 border ${
-                  fieldErrors.phone_number ? "border-red-500" : "border-gray-300"
+                  fieldErrors.phone_number
+                    ? "border-red-500"
+                    : "border-gray-300"
                 } placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm`}
                 placeholder="Phone number"
                 value={signupData.phone_number}
                 onChange={handleSignupChange}
               />
               {fieldErrors.phone_number && (
-                <p className="text-red-500 text-xs mt-1">{fieldErrors.phone_number}</p>
+                <p className="text-red-500 text-xs mt-1">
+                  {fieldErrors.phone_number}
+                </p>
               )}
             </div>
             <div>
@@ -293,7 +310,9 @@ const Register = ({ setIsAuthenticated }) => {
                 onChange={handleSignupChange}
               />
               {fieldErrors.password && (
-                <p className="text-red-500 text-xs mt-1">{fieldErrors.password}</p>
+                <p className="text-red-500 text-xs mt-1">
+                  {fieldErrors.password}
+                </p>
               )}
             </div>
             <div>
@@ -307,14 +326,18 @@ const Register = ({ setIsAuthenticated }) => {
                 autoComplete="new-password"
                 required
                 className={`appearance-none rounded-none relative block w-full px-3 py-2 border ${
-                  fieldErrors.verify_password ? "border-red-500" : "border-gray-300"
+                  fieldErrors.verify_password
+                    ? "border-red-500"
+                    : "border-gray-300"
                 } placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm`}
                 placeholder="Confirm password"
                 value={signupData.verify_password}
                 onChange={handleSignupChange}
               />
               {fieldErrors.verify_password && (
-                <p className="text-red-500 text-xs mt-1">{fieldErrors.verify_password}</p>
+                <p className="text-red-500 text-xs mt-1">
+                  {fieldErrors.verify_password}
+                </p>
               )}
             </div>
           </div>
@@ -340,7 +363,9 @@ const Register = ({ setIsAuthenticated }) => {
             </label>
           </div>
           {fieldErrors.agreedToTerms && (
-            <p className="text-red-500 text-xs mt-1">{fieldErrors.agreedToTerms}</p>
+            <p className="text-red-500 text-xs mt-1">
+              {fieldErrors.agreedToTerms}
+            </p>
           )}
 
           <div>
@@ -379,7 +404,7 @@ const Register = ({ setIsAuthenticated }) => {
             </button>
           </div>
 
-          <div className="text-center">
+          {/* <div className="text-center">
             <button
               type="button"
               onClick={() => {
@@ -391,7 +416,7 @@ const Register = ({ setIsAuthenticated }) => {
             >
               Demo Register (Skip Registration)
             </button>
-          </div>
+          </div> */}
         </form>
       </div>
       <VerificationModal

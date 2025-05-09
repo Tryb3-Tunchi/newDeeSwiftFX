@@ -151,12 +151,12 @@ const Login = memo(({ setIsAuthenticated }) => {
     }
   }, [loginData.email]);
 
-  const handleDemoLogin = useCallback(() => {
-    setIsAuthenticated({ username: "demoUser" }, "demoToken");
-    localStorage.setItem("authToken", "demoToken");
-    localStorage.setItem("refreshToken", "demoRefreshToken");
-    navigate("/dashboard");
-  }, [setIsAuthenticated, navigate]);
+  // const handleDemoLogin = useCallback(() => {
+  //   setIsAuthenticated({ username: "demoUser" }, "demoToken");
+  //   localStorage.setItem("authToken", "demoToken");
+  //   localStorage.setItem("refreshToken", "demoRefreshToken");
+  //   navigate("/dashboard");
+  // }, [setIsAuthenticated, navigate]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-[url('/images/trading-bg.svg')] bg-cover bg-center bg-no-repeat">
@@ -284,7 +284,7 @@ const Login = memo(({ setIsAuthenticated }) => {
             </button>
           </div>
 
-          <div className="text-center">
+          {/* <div className="text-center">
             <button
               type="button"
               onClick={handleDemoLogin}
@@ -292,7 +292,7 @@ const Login = memo(({ setIsAuthenticated }) => {
             >
               Demo Login (Skip Authentication)
             </button>
-          </div>
+          </div> */}
         </form>
       </div>
 
