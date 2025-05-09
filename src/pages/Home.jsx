@@ -114,7 +114,7 @@ const PackageCarousel = () => {
                       <strong>Duration:</strong> {pkg.duration}
                     </p>
                     <Link
-                      to="/signup"
+                      to="/register"
                       className={`w-full py-3 px-4 rounded-lg font-medium text-center block transition-colors shadow-md hover:shadow-lg ${
                         pkg.recommended
                           ? "bg-green-500 hover:bg-green-600 text-white"
