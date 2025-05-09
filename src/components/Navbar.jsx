@@ -307,9 +307,8 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated, username }) => {
             <div>
               <img className="w-14 sm:w-10 p-0 m-0" src="logo.png" alt="" width={1} />
             </div>
-            <span className="">
-            <span className="text-blue-600 dark:text-blue-400 mr-1">Dee</span>
-            SwiftFX</span>
+            <span className="tracking-tighter">
+            <span className="text-blue-600 dark:text-blue-400 mr-1">Dee</span>SwiftFX</span>
           </Link>
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex space-x-6">
