@@ -307,7 +307,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated, username }) => {
             <div>
               <img className="w-14 sm:w-10 p-0 m-0" src="logo.png" alt="" width={1} />
             </div>
-            <span className="hidden sm:block">
+            <span className="">
             <span className="text-blue-600 dark:text-blue-400 mr-1">Dee</span>
             Swift Trade</span>
           </Link>
